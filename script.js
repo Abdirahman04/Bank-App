@@ -1,4 +1,4 @@
-const userArr = [];
+const userArr = JSON.parse(localStorage.getItem('user')) || [];
 class BankUser {
   constructor(accName, email, accProfileImg, accNumber, accBalance) {
     this.accName = accName;
@@ -18,13 +18,24 @@ class BankUser {
     const name = nameInput.value;
     const email = emailInput.value;
     const img = imagePath.value;
-    const accNum = Math.floor(Math.random() * 10)
+    // let random;
+    // for(let i = 0; i < 10; i++){
+    //   random += i;
+    // }
+    // const random = (number) => {
+    //   for(let i = 0; i < 10; i++) {
+    //     number += i;
+    //     return number;
+    //   }
+    // }
+    // const accNum = random(accNumber)
     const accBalance = 500
 
     if (name && email) {
       const user = new BankUser(name, email, img, accNum, accBalance); // Create new object
       userArr.push(user);
       console.log(userArr);
+      localStorage.setItem('user', JSON.stringify(userArr))
       BankUser.displayUser();
     }
   }
