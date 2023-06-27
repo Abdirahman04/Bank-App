@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <main class="bank-app position-relative">
+      <section class="header">
+        <header>
+          <nav></nav>
+        </header>
+      </section>
+
+      <section class="body">
+        <!-- <hr class="bg-danger"> -->
+        <div class="content position-relative pt-3">
+          <div class="wrapper position-fixed bg-white">
+            <div class="d-flex align-items-center justify-content-between p-3">
+              <i class="fas fa-bars text-muted fs-5"></i>
+              <img src="img/logo.png" alt="" width="120" />
+              <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-users text-muted"></i>
+                <i class="fas fa-bell text-muted fs-5"></i>
+                <div class="position-absolute d-none">
+                  <small>3</small>
+                </div>
+              </div>
+              <!-- <h4 class="display-6 text-dark p-3">Admin</h4> -->
+            </div>
+            <!-- <hr> -->
+            <div class="content">
+              <div class="d-flex align-items-center justify-content-between">
+                <p>Admin</p>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <section class="body" style="margin-top: 150px">
+            <div
+              class="profile d-flex align-items-center flex-column justify-content-center"
+            >
+              <img
+                src="img/127757412.jpg"
+                width="130"
+                class="rounded-circle"
+                alt=""
+              />
+
+              <div class="form-content p-4 position-fixed">
+                <h5 class="text-center">Enter New</h5>
+
+                <form id="user-form">
+                  <input
+                    type="text"
+                    class="d-block w-100"
+                    id="name-input"
+                    placeholder="Enter name"
+                  />
+                  <input
+                    type="email"
+                    class="d-block w-100"
+                    id="email-input"
+                    placeholder="Enter email"
+                  />
+                  <input
+                    type="text"
+                    class="d-block w-100"
+                    id="image-input"
+                    placeholder="Upload image"
+                    value="img/user/"
+                  />
+
+                  <button class="mt-3 text-white w-100">Add User</button>
+
+                  <i class="fas fa-times text-danger position-absolute" style="top: 15px;"></i>
+                </form>
+              </div>
+
+              <input
+                type="text"
+                placeholder="Find users..."
+                class="w-100 border-0 rounded-0 bg-transparent"
+              />
+            </div>
+
+            <div class="userslist w-100 mt-4" id="usersList"> <!-- JavaScript --> </div>
+
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
